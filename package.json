@@ -1,0 +1,27 @@
+{
+  "name": "canirunserver",
+  "version": "1.0.0",
+  "description": "server for CanIRun api calls",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccmalcom/CanIRunServer.git"
+  },
+  "author": "Chase Malcom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ccmalcom/CanIRunServer/issues"
+  },
+  "homepage": "https://github.com/ccmalcom/CanIRunServer#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
