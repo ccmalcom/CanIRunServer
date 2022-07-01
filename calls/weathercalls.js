@@ -9,7 +9,7 @@ router.get('/check', async (req, res) => {
     try {
         const response = await fetch(api);
         const data = await response.json();
-        let weatherData = {
+        let weatherData = await {
             temp: data.current.temp_f,
             condition: data.current.condition.text,
             humidity: data.current.humidity,
