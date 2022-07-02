@@ -1,11 +1,14 @@
 const router = require('express').Router();
 const key = process.env.WEATHER_API_KEY;
 
-let api = `https://api.weatherapi.com/v1/current.json?key=${key}&q=46225&aqi=yes`
+//? how to make this dynamic zipcode?
+
+
 
 
 
 router.get('/check', async (req, res) => {
+    let api = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${req.body.zip}&aqi=yes`
     try {
         const response = await fetch(api);
         const data = await response.json();
