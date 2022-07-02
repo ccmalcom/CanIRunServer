@@ -9,6 +9,7 @@ const key = process.env.WEATHER_API_KEY;
 router.get('/check/:zip', async (req, res) => {
     let { zip } = req.params;
     let api = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${zip}&aqi=yes`;
+    console.log(`api: ${api}`);
     try {
         const response = await fetch(api);
         const data = await response.json();
@@ -19,7 +20,7 @@ router.get('/check/:zip', async (req, res) => {
         };
         res.send(weatherData);
     } catch (error) {
-        res.send(`Sorry, ${error}`);
+        res.send(error);
     }
 });
 
