@@ -10,10 +10,12 @@ router.get('/check/:zip', async (req, res) => {
         const data = await response.json();
         let weatherData = await {
             city: data.location.name,
+            state: data.location.region,
             condition: data.current.condition.text,
             icon: data.current.condition.icon,
             temp: data.current.temp_f,
             humidity: data.current.humidity,
+            zip: zip
         };
         res.send(weatherData);
     } catch (error) {
