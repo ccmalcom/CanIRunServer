@@ -15,7 +15,7 @@ router.get('/check/:zip', async (req, res) => {
             icon: data.current.condition.icon,
             temp: data.current.temp_f,
             humidity: data.current.humidity,
-            zip: zip
+            location: zip
         };
         res.send(weatherData);
     } catch (error) {
