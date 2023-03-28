@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
 
     res.send('Hello World');
 });
+app.get('/status', (req, res) => {
+    res.send('If you can see this, I\'m alive!');
+    res.sendStatus(200);
+});
 
 app.listen(port, () => {
     console.log(`Congrats, Server running on port ${port}`);
