@@ -14,8 +14,7 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 });
 app.get('/status', (req, res) => {
-    res.send('If you can see this, I\'m alive!');
-    res.sendStatus(200);
+    res.status(200).send('If you can see this, I\'m alive!');
 });
 
 app.listen(port, () => {
